@@ -11,6 +11,7 @@ class SearchController extends Controller
 
     public function products()
     {
+        $session = new Session();
         $search = $_POST['search'] ?? '';
 
         if ($search != '') {
