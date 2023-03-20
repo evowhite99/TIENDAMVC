@@ -2,6 +2,13 @@
 
 class Validate
 {
+    public static function limites($palabras, $limite) {
+        $palabras = html_entity_decode($palabras);
+        if (strlen($palabras) > $limite) {
+            $palabras= substr($palabras, 0, $limite) . '...';
+        }
+        return $palabras;
+    }
     public static function number($string)
     {
         $search = [' ', '€', '$', ','];
