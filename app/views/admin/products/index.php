@@ -49,6 +49,17 @@
                 <a href="<?= ROOT ?>adminProduct/create" class="btn btn-success">
                     Crear Producto
                 </a>
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-end">
+                        <?php for ($i = 1; $i <= $data['totalPages']; $i++): ?>
+                            <li class="page-item<?= $i == $data['currentPage'] ? ' active' : '' ?>">
+                                <a class="page-link" href="<?= ROOT ?>adminProduct/index/<?= $i ?>">
+                                    <?= $i ?>
+                                </a>
+                            </li>
+                        <?php endfor; ?>
+                    </ul>
+                </nav>
             </div>
             <div class="col-sm-6">
 

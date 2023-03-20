@@ -149,4 +149,19 @@ class AdminProduct
 
         return $errors;
     }
+    public function countProducts() {
+        $sql = 'SELECT COUNT(*) as total FROM products';
+        $query = $this->db->prepare($sql);
+        $query->execute();
+        return $query->fetch(PDO::FETCH_OBJ)->total;
+    }
+
+    public function getPaginatedProducts($start, $limit) {
+        $sql = 'SELECT * FROM products  WHERE deleted = 0 LIMIT :start, :limit';
+        $query = $this->db->prepare($sql);
+        $query->bindParam(':start', $start, PDO::PARAM_INT);
+        $query->bindParam(':limit', $limit, PDO::PARAM_INT);
+        $query->execute();
+        return $query->fetchAll(PDO::FETCH_OBJ);
+    }
 }
