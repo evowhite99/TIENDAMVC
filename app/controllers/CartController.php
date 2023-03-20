@@ -79,16 +79,17 @@ class CartController extends Controller
         $session = new Session();
         $user = $session->getUser();
         $cart = $this->model->getCart($user->id);
-        $payment = $_POST['payment'] ?? '';
+        $paymentId = $_POST['payment_method'] ?? '';
+        $pay = $this->model->getPayment($paymentId);
         $address = $this->model->getAddress($user->id);
 
         $data = [
             'titulo' => 'Carrito | Verificar los datos',
             'menu' => true,
-            'payment' => $payment,
             'user' => $user,
             'data' => $cart,
             'address' => $address,
+            'id' => $pay,
         ];
 
         $this->view('carts/verify', $data);
@@ -301,10 +302,12 @@ class CartController extends Controller
         } else {
             $session->login($user);
             $this->model->updateUserAddress($user);
+            $paymentMethods = $this->model->getAll();
             $data = [
                 'titulo' => 'Carrito | Forma de pago',
                 'subtitle' => 'Checkout | Forma de pago',
                 'menu' => true,
+                'payment' => $paymentMethods,
             ];
 
             $this->view('carts/paymentmode', $data);

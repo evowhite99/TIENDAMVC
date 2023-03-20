@@ -140,4 +140,19 @@ class Cart
         ];
         return $query->execute($params);
     }
+    public function getAll()
+    {
+        $query = $this->db->prepare('SELECT * FROM payment_methods');
+        $query->execute();
+
+        return $query->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function getPayment($id)
+    {
+        $query = $this->db->prepare('SELECT * FROM payment_methods WHERE id = :id');
+        $query->execute([':id' => $id]);
+
+        return $query->fetch(PDO::FETCH_OBJ);
+    }
 }

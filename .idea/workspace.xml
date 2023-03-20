@@ -4,10 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="nuevo - crear vista users con detalles, editar y eliminar">
+    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="nuevo - guardar precio carrito al comprar">
+      <change afterPath="$PROJECT_DIR$/app/controllers/AdminPayController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/AdminPay.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/metodos/create.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/metodos/delete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/metodos/edit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/metodos/pagos.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Cart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/carts/paymentmode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/paymentmode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/carts/verify.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/verify.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +78,7 @@
       <workItem from="1678541289556" duration="707000" />
       <workItem from="1679253164002" duration="774000" />
       <workItem from="1679254156722" duration="13586000" />
-      <workItem from="1679310610107" duration="8743000" />
+      <workItem from="1679310610107" duration="9600000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1679254574522</created>
@@ -169,7 +178,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679319115213</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="nuevo - guardar precio carrito al comprar">
+      <created>1679319590670</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679319590670</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +229,7 @@
     <MESSAGE value="ejercicio 6 - direccion: separar y crear Addreeses" />
     <MESSAGE value="ejercicio 7 - ShopController" />
     <MESSAGE value="nuevo - crear vista users con detalles, editar y eliminar" />
-    <option name="LAST_COMMIT_MESSAGE" value="nuevo - crear vista users con detalles, editar y eliminar" />
+    <MESSAGE value="nuevo - guardar precio carrito al comprar" />
+    <option name="LAST_COMMIT_MESSAGE" value="nuevo - guardar precio carrito al comprar" />
   </component>
 </project>

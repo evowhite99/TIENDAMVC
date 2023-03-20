@@ -82,6 +82,9 @@
                     <a href="<?= ROOT ?>adminNuevo" class="nav-link">Detalles usuarios</a>
                 </li>
                 <li class="nav-item">
+                    <a href="<?= ROOT ?>AdminPay" class="nav-link">Metodos de pago</a>
+                </li>
+                <li class="nav-item">
                     <a href="<?= ROOT ?>admin/logout" class="nav-link">Salir</a>
                 </li>
             </ul>

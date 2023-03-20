@@ -15,24 +15,14 @@
     <div class="card-body">
         <form action="<?= ROOT ?>cart/verify/" method="POST">
             <div class="form-group text-left">
-                <div class="radio">
-                    <label><input type="radio" name="payment" value="cc1"> Tarjeta de crédito MasterCard</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="payment" value="cc2"> Tarjeta de crédito Visa</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="payment" value="dc"> Tarjeta de débito</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="payment" value="cash"> Efectivo</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="payment" value="paypal"> Paypal</label>
-                </div>
-                <div class="radio">
-                    <label><input type="radio" name="payment" value="bitcoins"> Bitcoins</label>
-                </div>
+                <?php foreach ($data['payment'] as $method): ?>
+                    <div class="form-check">
+                        <input required class="form-check-input" type="radio" name="payment_method" id="payment_method_<?= $method->id ?>" value="<?= $method->id ?>">
+                        <label class="form-check-label" for="payment_method_<?= $method->id ?>">
+                            <?= $method->name ?> (<?= $method->code ?>)
+                        </label>
+                    </div>
+                <?php endforeach; ?>
             </div>
             <div class="form-group text-left">
                 <input type="submit" value="Enviar datos" class="btn btn-success">

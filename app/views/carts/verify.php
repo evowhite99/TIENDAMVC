@@ -15,7 +15,7 @@
     <div class="card-body">
         <?php $verify = false; $subtotal = 0; $send = 0; $discount = 0 ?>
 
-        Modo de Pago: <?= $data['payment'] ?><br>
+        Modo de Pago: <?= $data['id']->name ?> (<?= $data['id']->code ?>)<br>
         Nombre: <?= $data['address']->first_name ?> <?= $data['address']->last_name_1 ?> <?= $data['address']->last_name_2 ?><br>
         Dirección: <?= $data['address']->address ?><br>
         Ciudad:	<?= $data['address']->city ?><br>
