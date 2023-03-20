@@ -10,6 +10,7 @@ define('VIEWS', URL . APP . 'views/');
 define('ENCRIPTKEY', 'elperrodesanroque');
 
 // Carga las clases iniciales
+require_once ('libs/AdminSession.php');
 require_once('libs/Mysqldb.php');
 require_once('libs/Controller.php');
 require_once('libs/Application.php');

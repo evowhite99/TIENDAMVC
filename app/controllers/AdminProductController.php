@@ -11,7 +11,7 @@ class AdminProductController extends Controller
 
     public function index()
     {
-        $session = new Session();
+        $session = new AdminSession();
 
         if ($session->getLogin()) {
 
@@ -35,6 +35,7 @@ class AdminProductController extends Controller
 
     public function create()
     {
+        $session = new AdminSession();
         $errors = [];
         $dataForm = [];
         $typeConfig = $this->model->getConfig('productType');
@@ -185,6 +186,7 @@ class AdminProductController extends Controller
 
     public function update($id)
     {
+        $session = new AdminSession();
         $errors = [];
         $typeConfig = $this->model->getConfig('productType');
         $statusConfig = $this->model->getConfig('productStatus');
@@ -335,6 +337,7 @@ class AdminProductController extends Controller
 
     public function delete($id)
     {
+        $session = new AdminSession();
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {

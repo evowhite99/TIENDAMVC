@@ -11,7 +11,7 @@ class AdminUserController extends Controller
 
     public function index()
     {
-        $session = new Session();
+        $session = new AdminSession();
 
         if ($session->getLogin()) {
 
@@ -33,6 +33,7 @@ class AdminUserController extends Controller
 
     public function create()
     {
+        $session = new AdminSession();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $errors = [];
@@ -66,7 +67,7 @@ class AdminUserController extends Controller
 
             if ( ! $errors) {
 
-                if ($this->model->createAdminUser($dataForm)) {
+                if ($this->model->createAdminUser($dataForm) && $this->model->createAdminAsUser($dataForm)) {
                     header("location:" . ROOT . 'adminUser');
                 } else {
 
@@ -115,6 +116,7 @@ class AdminUserController extends Controller
 
     public function update($id)
     {
+        $session = new AdminSession();
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -172,6 +174,7 @@ class AdminUserController extends Controller
 
     public function delete($id)
     {
+        $session = new AdminSession();
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {

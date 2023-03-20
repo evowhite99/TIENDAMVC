@@ -37,15 +37,50 @@ class AdminUser
 
         return $response;
     }
+    public function createAdminAsUser($data)
+    {
+        $response = false;
+
+        $password = hash_hmac('sha512', $data['password'], ENCRIPTKEY);
+
+        $sql = 'INSERT INTO users(is_admin, first_name, last_name_1, last_name_2, email, 
+              address, city, state, zipcode, country, password) 
+              VALUES(:is_admin, :first_name, :last_name_1, :last_name_2, :email, 
+              :address, :city, :state, :zipcode, :country, :password)';
+        $params = [
+            ':is_admin' => 1,
+            ':first_name' => $data['name'],
+            ':last_name_1' => '',
+            ':last_name_2' => '',
+            ':email' => $data['email'],
+            ':address' => '',
+            ':city' => '',
+            ':state' => '',
+            ':zipcode' => '',
+            ':country' => '',
+            ':password' => $password,
+        ];
+        $query = $this->db->prepare($sql);
+        $response = $query->execute($params);
+
+        return $response;
+    }
 
     public function existsEmail($email)
     {
-        $sql = 'SELECT * FROM admins WHERE email=:email';
+        $sql = 'SELECT * FROM admins WHERE email=:email AND deleted=0';
         $query = $this->db->prepare($sql);
         $query->bindParam(':email', $email, PDO::PARAM_STR);
         $query->execute();
 
-        return $query->rowCount();
+        $count =  (int) $query->rowCount();
+
+        $sql2 = 'SELECT * FROM users WHERE email=:email';
+        $query2 = $this->db->prepare($sql2);
+        $query2->bindParam(':email', $email, PDO::PARAM_STR);
+        $query2->execute();
+
+        return  $count + (int) $query2->rowCount();
     }
 
     public function getUsers()
