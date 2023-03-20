@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="ejercicio 4 - boton volver a &quot;x&quot; con $back">
+    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="ejercicio 5 - Separar en: llamada y proceso de datos">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/AdminUserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AdminUserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/users/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/users/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/users/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
       <workItem from="1678541289556" duration="707000" />
       <workItem from="1679253164002" duration="774000" />
       <workItem from="1679254156722" duration="13586000" />
-      <workItem from="1679310610107" duration="3601000" />
+      <workItem from="1679310610107" duration="5027000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1679254574522</created>
@@ -130,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679313186305</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ejercicio 5 - Separar en: llamada y proceso de datos">
+      <created>1679314224341</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679314224341</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +173,7 @@
     <MESSAGE value="---" />
     <MESSAGE value="ejercicio 3 - logout admin" />
     <MESSAGE value="ejercicio 4 - boton volver a &quot;x&quot; con $back" />
-    <option name="LAST_COMMIT_MESSAGE" value="ejercicio 4 - boton volver a &quot;x&quot; con $back" />
+    <MESSAGE value="ejercicio 5 - Separar en: llamada y proceso de datos" />
+    <option name="LAST_COMMIT_MESSAGE" value="ejercicio 5 - Separar en: llamada y proceso de datos" />
   </component>
 </project>

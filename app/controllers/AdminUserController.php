@@ -31,9 +31,13 @@ class AdminUserController extends Controller
 
     }
 
+//-------------------------------
     public function create($dataForm = [], $errors = [])
     {
-        $data = [
+        $session = new AdminSession();
+        if ($session->getLogin()) {
+
+            $data = [
             'titulo' => 'Administración de Usuarios - Alta',
             'menu' => false,
             'admin' => true,
@@ -41,11 +45,17 @@ class AdminUserController extends Controller
             'data' => $dataForm,
         ];
         $this->view('admin/users/create', $data);
+        } else {
+            header('LOCATION:' . ROOT . 'admin');
+        }
     }
 
     public function store()
     {
-        $errors = [];
+        $session = new AdminSession();
+        if ($session->getLogin()) {
+
+            $errors = [];
 
         $name = $_POST['name'] ?? '';
         $email = $_POST['email'] ?? '';
@@ -97,10 +107,17 @@ class AdminUserController extends Controller
             $this->create($dataForm, $errors);
 
         }
+        } else {
+            header('LOCATION:' . ROOT . 'admin');
+        }
+
     }
+
     public function edit($id, $errors = [])
     {
-        $user = $this->model->getUserById($id);
+        $session = new AdminSession();
+        if ($session->getLogin()) {
+            $user = $this->model->getUserById($id);
         $status = $this->model->getConfig('adminStatus');
 
         $data = [
@@ -112,11 +129,17 @@ class AdminUserController extends Controller
             'errors' => $errors,
         ];
         $this->view('admin/users/update', $data);
+        } else {
+            header('LOCATION:' . ROOT . 'admin');
+        }
     }
 
     public function update($id)
     {
-        $errors = [];
+        $session = new AdminSession();
+        if ($session->getLogin()) {
+
+            $errors = [];
         $name = $_POST['name'] ?? '';
         $email = $_POST['email'] ?? '';
         $password1 = $_POST['password1'] ?? '';
@@ -152,33 +175,47 @@ class AdminUserController extends Controller
                 $this->edit($id, $errors);
             }
         }
+        } else {
+            header('LOCATION:' . ROOT . 'admin');
+        }
     }
+
     public function delete($id, $errors = [])
     {
+        $session = new AdminSession();
+        if ($session->getLogin()) {
+            $user = $this->model->getUserById($id);
+            $status = $this->model->getConfig('adminStatus');
+            $data = [
+                'titulo' => 'Administración de Usuarios - Eliminación',
+                'menu' => false,
+                'admin' => true,
+                'data' => $user,
+                'status' => $status,
+                'errors' => $errors,
+            ];
 
-        $user = $this->model->getUserById($id);
-        $status = $this->model->getConfig('adminStatus');
-        $data = [
-            'titulo' => 'Administración de Usuarios - Eliminación',
-            'menu' => false,
-            'admin' => true,
-            'data' => $user,
-            'status' => $status,
-            'errors' => $errors,
-        ];
-
-        $this->view('admin/users/delete', $data);
+            $this->view('admin/users/delete', $data);
+        } else {
+            header('LOCATION:' . ROOT . 'admin');
+        }
     }
 
     public function destroy($id)
     {
-        $errors = $this->model->delete($id);
+        $session = new AdminSession();
+        if ($session->getLogin()) {
 
-        if (!$errors) {
-            header('location:' . ROOT . 'adminUser');
-            return;
+            $errors = $this->model->delete($id);
+
+            if (!$errors) {
+                header('location:' . ROOT . 'adminUser');
+                return;
+            }
+
+            $this->delete($id, $errors);
+        } else {
+            header('LOCATION:' . ROOT . 'admin');
         }
-
-        $this->delete($id, $errors);
     }
 }
