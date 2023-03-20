@@ -9,6 +9,12 @@ class AdminController extends Controller
         $this->model = $this->model('Admin');
     }
 
+    public function logout() {
+        $session = new Session();
+        $session->logout();
+        header('location:' . ROOT . 'admin');
+    }
+
     public function index()
     {
         $data = [
