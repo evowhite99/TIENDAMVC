@@ -13,7 +13,6 @@ class CoursesController extends Controller
     {
         $session = new Session();
 
-        if ($session->getLogin()) {
 
             $courses = $this->model->getCourses();
 
@@ -26,8 +25,6 @@ class CoursesController extends Controller
 
             $this->view('courses/index', $data);
 
-        } else {
-            header('location:' . ROOT);
-        }
+
     }
 }

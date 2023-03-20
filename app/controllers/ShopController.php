@@ -13,7 +13,6 @@ class ShopController extends Controller
     {
         $session = new Session();
 
-        if ($session->getLogin()) {
 
             $mostSold = $this->model->getMostSold();
             $news = $this->model->getNews();
@@ -27,9 +26,7 @@ class ShopController extends Controller
                 'news' => $news,
             ];
             $this->view('shop/index', $data);
-        } else {
-            header('location:' . ROOT);
-        }
+
 
     }
 
@@ -59,16 +56,29 @@ class ShopController extends Controller
 
         }
 
-        $data = [
-            'titulo' => 'Detalle del producto',
-            'menu' => true,
-            'subtitle' => $product->name,
-            'back' => $back,
-            'errors' => [],
-            'data' => $product,
-            'user_id' => $session->getUserId(),
-            'txtBtn' => $txtBtn,
-        ];
+        if($session->getLogin()) {
+            $data = [
+                'titulo' => 'Detalle del producto',
+                'menu' => true,
+                'subtitle' => $product->name,
+                'back' => $back,
+                'txtBtn' =>  $txtBtn,
+                'errors' => [],
+                'data' => $product,
+                'user_id' => $session->getUserId(),
+            ];
+        }else{
+            $data = [
+                'titulo' => 'Detalle del producto',
+                'menu' => true,
+                'subtitle' => $product->name,
+                'back' => $back,
+                'txtBtn' =>  $txtBtn,
+                'errors' => [],
+                'data' => $product,
+            ];
+            $session->logout();
+        }
 
         $this->view('shop/show', $data);
     }
@@ -77,7 +87,6 @@ class ShopController extends Controller
     {
         $session = new Session();
 
-        if ($session->getLogin()) {
 
             $data = [
                 'titulo' => 'Quienes somos',
@@ -86,13 +95,13 @@ class ShopController extends Controller
             ];
 
             $this->view('shop/whoami', $data);
-        } else {
-            header('location:' . ROOT);
-        }
+
     }
 
     public function contact()
     {
+        $session = new Session();
+
         $errors = [];
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -151,9 +160,7 @@ class ShopController extends Controller
             }
         } else {
 
-            $session = new Session();
 
-            if ($session->getLogin()) {
 
                 $data = [
                     'titulo' => 'Contacta con nosotros',
@@ -162,9 +169,7 @@ class ShopController extends Controller
                 ];
 
                 $this->view('shop/contact', $data);
-            } else {
-                header('location:' . ROOT);
-            }
+
 
         }
     }

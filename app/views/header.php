@@ -58,9 +58,12 @@
                             <button type="submit" class="btn btn-light"><i class="fas fa-search"></i></button>
                         </form>
                     </li>
-                    <li class="nav-item">
+                    <?php if(isset($_SESSION['user']) && $_SESSION['cartTotal'] >= 0): ?>
                         <a href="<?= ROOT ?>shop/logout" class="nav-link">Salir</a>
-                    </li>
+                    <?php else : ?>
+                        <a href="<?= ROOT ?>login" class="nav-link">Login</a>
+                        <a href="<?= ROOT ?>login/registro" class="nav-link">Registro</a>
+                    <?php endif; ?>
                     <?php if(isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']): ?>
                         <a href="<?= ROOT ?>adminUser">Administración</a>
                     <?php endif; ?>
