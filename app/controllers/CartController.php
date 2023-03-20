@@ -99,7 +99,18 @@ class CartController extends Controller
         $session = new Session();
         $user = $session->getUser();
 
-        if ($this->model->closeCart($user->id, 1)) {
+        $cartItems = $this->model->getCart($user->id);
+        $subtotal = 0;
+        $send = 0;
+        $discount = 0;
+        foreach ($cartItems as $item) {
+            $subtotal += $item->price * $item->quantity;
+            $discount += $item->discount;
+            $send += $item->send;
+        }
+        $total = $subtotal - $discount + $send;
+
+        if ($this->model->closeCart($user->id, 1, $total)) {
 
             $data = [
                 'titulo' => 'Carrito | Gracias por su compra',

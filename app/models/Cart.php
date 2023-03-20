@@ -129,13 +129,14 @@ class Cart
         return $query->execute($params);
     }
 
-    public function closeCart($id, $state)
+    public function closeCart($id, $state, $total)
     {
-        $sql = 'UPDATE carts SET state=:state WHERE user_id=:user_id AND state=0';
+        $sql = 'UPDATE carts SET state=:state, total=:total, date = DATE_ADD(date, INTERVAL 1 HOUR) WHERE user_id=:user_id AND state=0';
         $query = $this->db->prepare($sql);
         $params = [
             ':user_id' => $id,
             ':state' => $state,
+            ':total' => $total,
         ];
         return $query->execute($params);
     }
