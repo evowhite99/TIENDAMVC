@@ -3,6 +3,14 @@
     <div class="card-header">
         <h1 class="text-center">Administración de Productos</h1>
     </div>
+    <div class="nav-item">
+        <form action="<?= ROOT ?>adminSearchP/products" class="d-flex" method="POST">
+            <input type="text" name="search" id="search" class="form-control"
+                   size="20" placeholder="¿producto?" required
+            >
+            <button type="submit" class="btn btn-light"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
     <div class="card-body">
         <table class="table text-center" width="100%">
             <thead>
