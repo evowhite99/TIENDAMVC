@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="ejercicio 2 - 30 caracteres descripcion admin">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="variacion 2 - expandir/contraer 30 caracteres descripcion admin">
       <change beforePath="$PROJECT_DIR$/app/views/admin/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/products/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +61,7 @@
       <workItem from="1678541289556" duration="707000" />
       <workItem from="1679253164002" duration="774000" />
       <workItem from="1679254156722" duration="13586000" />
-      <workItem from="1679310610107" duration="1948000" />
+      <workItem from="1679310610107" duration="1999000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1679254574522</created>
@@ -99,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679312395535</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="variacion 2 - expandir/contraer 30 caracteres descripcion admin">
+      <created>1679312590050</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679312590050</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,6 +140,7 @@
     <MESSAGE value="(bug) no sale login en la lupa arreglado" />
     <MESSAGE value="ejercicio 1 - is_admin y AdminSession" />
     <MESSAGE value="ejercicio 2 - 30 caracteres descripcion admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="ejercicio 2 - 30 caracteres descripcion admin" />
+    <MESSAGE value="variacion 2 - expandir/contraer 30 caracteres descripcion admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="variacion 2 - expandir/contraer 30 caracteres descripcion admin" />
   </component>
 </project>

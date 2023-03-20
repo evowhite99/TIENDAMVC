@@ -19,9 +19,7 @@
                     <td class="text-center"><?= $product->id ?></td>
                     <td class="text-center"><?= $data['type'][$product->type - 1]->description ?></td>
                     <td class="text-center"><?= $product->name ?></td>
-                    <td class="text-center toggle">
-                        <span class="description"><?= Validate::limites($product->description, 30); ?></span>
-                    </td>
+                    <td class="text-center"><?= Validate::limites($product->description, 30);?></td>
                     <td class="text-center">
                         <a href="<?= ROOT ?>adminProduct/update/<?= $product->id ?>"
                            class="btn btn-info"
@@ -51,31 +49,3 @@
     </div>
 </div>
 <?php include_once(VIEWS . 'footer.php')?>
-<style>
-    .description {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 200px;
-        display: inline-block;
-    }
-
-    .description.expanded {
-        white-space: normal;
-        overflow: visible;
-        text-overflow: clip;
-        max-width: none;
-    }
-</style>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const toggles = document.querySelectorAll('.toggle');
-
-        toggles.forEach(function (toggle) {
-            toggle.addEventListener('click', function () {
-                const description = toggle.querySelector('.description');
-                description.classList.toggle('expanded');
-            });
-        });
-    });
-</script>
