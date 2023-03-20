@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="ejercicio 6 - direccion: separar y crear Addreeses">
+    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="ejercicio 7 - ShopController">
+      <change afterPath="$PROJECT_DIR$/app/controllers/AdminNuevoController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/AdminNuevo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/nuevaSeccion/nuevo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/nuevaSeccion/nuevoDelete.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/nuevaSeccion/nuevoEdit.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/nuevaSeccion/nuevoShow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/BooksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/BooksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/CoursesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/CoursesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/ShopController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ShopController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/libs/Application.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/libs/Application.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/shop/show.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shop/show.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/alumno/tiendamvc/app/views/carts",
+    "last_opened_file_path": "/home/alumno/tiendamvc/app/views/admin",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -50,6 +51,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/admin" />
       <recent name="$PROJECT_DIR$/app/views/carts" />
     </key>
   </component>
@@ -72,7 +74,7 @@
       <workItem from="1678541289556" duration="707000" />
       <workItem from="1679253164002" duration="774000" />
       <workItem from="1679254156722" duration="13586000" />
-      <workItem from="1679310610107" duration="7636000" />
+      <workItem from="1679310610107" duration="8243000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1679254574522</created>
@@ -158,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679317607724</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="ejercicio 7 - ShopController">
+      <created>1679318265790</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679318265790</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +209,7 @@
     <MESSAGE value="ejercicio 5 - Separar en: llamada y proceso de datos" />
     <MESSAGE value="ejercicio 5 - ORGANIZADO" />
     <MESSAGE value="ejercicio 6 - direccion: separar y crear Addreeses" />
-    <option name="LAST_COMMIT_MESSAGE" value="ejercicio 6 - direccion: separar y crear Addreeses" />
+    <MESSAGE value="ejercicio 7 - ShopController" />
+    <option name="LAST_COMMIT_MESSAGE" value="ejercicio 7 - ShopController" />
   </component>
 </project>

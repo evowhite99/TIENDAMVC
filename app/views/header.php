@@ -79,6 +79,9 @@
                     <a href="<?= ROOT ?>adminProduct" class="nav-link">Productos</a>
                 </li>
                 <li class="nav-item">
+                    <a href="<?= ROOT ?>adminNuevo" class="nav-link">Detalles usuarios</a>
+                </li>
+                <li class="nav-item">
                     <a href="<?= ROOT ?>admin/logout" class="nav-link">Salir</a>
                 </li>
             </ul>
