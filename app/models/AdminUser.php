@@ -62,6 +62,30 @@ class AdminUser
         ];
         $query = $this->db->prepare($sql);
         $response = $query->execute($params);
+        if ($response) {
+            $id = $this->db->lastInsertId();
+
+            $sql = 'INSERT INTO Addreeses(id, first_name, last_name_1, last_name_2, email, 
+                  address, city, state, zipcode, country) 
+                  VALUES(:id, :first_name, :last_name_1, :last_name_2, :email, 
+                  :address, :city, :state, :zipcode, :country)';
+
+            $params = [
+                ':id' => $id,
+                ':first_name' => $data['name'],
+                ':last_name_1' => '',
+                ':last_name_2' => '',
+                ':email' => $data['email'],
+                ':address' => '',
+                ':city' => '',
+                ':state' => '',
+                ':zipcode' => '',
+                ':country' => '',
+            ];
+
+            $query = $this->db->prepare($sql);
+            $response = $query->execute($params);
+        }
 
         return $response;
     }

@@ -9,6 +9,52 @@ class Cart
         $this->db = Mysqldb::getInstance()->getDatabase();
     }
 
+    public function getAddress($id)
+    {
+        $sql = 'SELECT * FROM Addreeses WHERE id = :id';
+        $query = $this->db->prepare($sql);
+        $query->execute([':id' => $id]);
+        return $query->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function updateUserAddress($data)
+    {
+        $response = false;
+
+        $data = (array) $data;
+
+
+        $sql = 'UPDATE Addreeses SET 
+                first_name = :first_name, 
+                last_name_1 = :last_name_1, 
+                last_name_2 = :last_name_2, 
+                email = :email, 
+                address = :address, 
+                city = :city, 
+                state = :state, 
+                zipcode = :zipcode, 
+                country = :country 
+            WHERE id = :id';
+
+        $params = [
+            ':id' => $data['id'],
+            ':first_name' => $data['first_name'],
+            ':last_name_1' => $data['last_name_1'],
+            ':last_name_2' => $data['last_name_2'],
+            ':email' => $data['email'],
+            ':address' => $data['address'],
+            ':city' => $data['city'],
+            ':state' => $data['state'],
+            ':zipcode' => $data['zipcode'],
+            ':country' => $data['country'],
+        ];
+
+        $query = $this->db->prepare($sql);
+        $response = $query->execute($params);
+
+        return $response;
+    }
+
     public function verifyProduct($product_id, $user_id)
     {
         $sql = 'SELECT * FROM carts WHERE product_id=:product_id AND user_id=:user_id AND state=0';

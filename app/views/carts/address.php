@@ -29,7 +29,7 @@
             <div class="form-group text-left">
                 <label for="last_name_2">Segundo apellido:</label>
                 <input type="text" name="last_name_2" id="last_name_2" class="form-control"
-                       placeholder="Escriba su segundo apellido"
+                       required placeholder="Escriba su segundo apellido"
                        value="<?= $data['data']->last_name_2 ?? '' ?>">
             </div>
             <div class="form-group text-left">
@@ -70,6 +70,12 @@
             </div>
             <div class="form-group text-left">
                 <input type="submit" value="Enviar datos" class="btn btn-success">
+            </div>
+        </form>
+        <form action="<?= ROOT ?>cart/paymentmode/" method="POST">
+
+            <div class="form-group text-left">
+                <input type="submit" value="Volver" class="btn btn-success">
             </div>
         </form>
     </div>

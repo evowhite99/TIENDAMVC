@@ -16,12 +16,12 @@
         <?php $verify = false; $subtotal = 0; $send = 0; $discount = 0 ?>
 
         Modo de Pago: <?= $data['payment'] ?><br>
-        Nombre: <?= $data['user']->first_name ?> <?= $data['user']->last_name_1 ?> <?= $data['user']->last_name_2 ?><br>
-        Dirección: <?= $data['user']->address ?><br>
-        Ciudad:	<?= $data['user']->city ?><br>
-        Estado: <?= $data['user']->state ?><br>
-        Código Postal: <?= $data['user']->zipcode ?><br>
-        País: <?= $data['user']->country ?><br>
+        Nombre: <?= $data['address']->first_name ?> <?= $data['address']->last_name_1 ?> <?= $data['address']->last_name_2 ?><br>
+        Dirección: <?= $data['address']->address ?><br>
+        Ciudad:	<?= $data['address']->city ?><br>
+        Estado: <?= $data['address']->state ?><br>
+        Código Postal: <?= $data['address']->zipcode ?><br>
+        País: <?= $data['address']->country ?><br>
 
         <table class="table table-stripped" width="100%">
             <tr>
