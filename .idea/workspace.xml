@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="nuevo - guardar precio carrito al comprar">
-      <change afterPath="$PROJECT_DIR$/app/controllers/AdminPayController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/AdminPay.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/metodos/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/metodos/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/metodos/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/admin/metodos/pagos.php" afterDir="false" />
+    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="nuevo - metodos de pago">
+      <change afterPath="$PROJECT_DIR$/app/controllers/AdminVentasController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/AdminVentas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/ventas/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/ventas/ventasDetalles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/Cart.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Cart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/carts/paymentmode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/paymentmode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/carts/verify.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/verify.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/alumno/tiendamvc/app/views/admin",
+    "last_opened_file_path": "/home/alumno/tiendamvc/app/views/admin/ventas",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -55,6 +50,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/views/admin/ventas" />
       <recent name="$PROJECT_DIR$/app/views/admin" />
       <recent name="$PROJECT_DIR$/app/views/carts" />
     </key>
@@ -78,7 +74,7 @@
       <workItem from="1678541289556" duration="707000" />
       <workItem from="1679253164002" duration="774000" />
       <workItem from="1679254156722" duration="13586000" />
-      <workItem from="1679310610107" duration="9600000" />
+      <workItem from="1679310610107" duration="10219000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1679254574522</created>
@@ -185,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679319590670</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="nuevo - metodos de pago">
+      <created>1679320317123</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679320317123</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -230,6 +233,7 @@
     <MESSAGE value="ejercicio 7 - ShopController" />
     <MESSAGE value="nuevo - crear vista users con detalles, editar y eliminar" />
     <MESSAGE value="nuevo - guardar precio carrito al comprar" />
-    <option name="LAST_COMMIT_MESSAGE" value="nuevo - guardar precio carrito al comprar" />
+    <MESSAGE value="nuevo - metodos de pago" />
+    <option name="LAST_COMMIT_MESSAGE" value="nuevo - metodos de pago" />
   </component>
 </project>
