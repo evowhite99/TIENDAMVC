@@ -88,6 +88,9 @@
                     <a href="<?= ROOT ?>AdminVentas" class="nav-link">Ventas</a>
                 </li>
                 <li class="nav-item">
+                    <a href="<?= ROOT ?>AdminPapelera" class="nav-link">Papelera</a>
+                </li>
+                <li class="nav-item">
                     <a href="<?= ROOT ?>admin/logout" class="nav-link">Salir</a>
                 </li>
             </ul>

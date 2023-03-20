@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="nuevo - filtro en admin buscador productos">
+    <list default="true" id="a2a833da-8b10-4778-be69-7e73f25e8198" name="Changes" comment="nuevo - paginacion en productos">
+      <change afterPath="$PROJECT_DIR$/app/controllers/AdminPapeleraController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/AdminPapelera.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/admin/papelera/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/AdminProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/AdminProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/AdminProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/AdminProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/products/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/products/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/header.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +72,7 @@
       <workItem from="1678541289556" duration="707000" />
       <workItem from="1679253164002" duration="774000" />
       <workItem from="1679254156722" duration="13586000" />
-      <workItem from="1679310610107" duration="12058000" />
+      <workItem from="1679310610107" duration="12717000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <created>1679254574522</created>
@@ -199,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679321646090</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="nuevo - paginacion en productos">
+      <created>1679323560230</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1679323560230</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +255,7 @@
     <MESSAGE value="nuevo - metodos de pago" />
     <MESSAGE value="nuevo - vista de ventas" />
     <MESSAGE value="nuevo - filtro en admin buscador productos" />
-    <option name="LAST_COMMIT_MESSAGE" value="nuevo - filtro en admin buscador productos" />
+    <MESSAGE value="nuevo - paginacion en productos" />
+    <option name="LAST_COMMIT_MESSAGE" value="nuevo - paginacion en productos" />
   </component>
 </project>
