@@ -23,7 +23,25 @@ class Shop
         $query = $this->db->prepare($sql);
         $query->execute([':id' => $id]);
 
-        return $query->fetch(PDO::FETCH_OBJ);
+        $product = $query->fetch(PDO::FETCH_OBJ);
+        $relation1 = $product->relation1;
+        $relation2 = $product->relation2;
+        $relation3 = $product->relation3;
+
+        $relatedProducts = $this->getRelatedProducts([$relation1, $relation2, $relation3]);
+
+        $product->related_products = $relatedProducts;
+
+        return $product;
+    }
+    public function getRelatedProducts($relatedIds)
+    {
+        $relacionado = implode(',', array_fill(0, count($relatedIds), '?'));
+        $sql = "SELECT * FROM products WHERE id IN ($relacionado)";
+        $query = $this->db->prepare($sql);
+        $query->execute($relatedIds);
+
+        return $query->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function getNews()

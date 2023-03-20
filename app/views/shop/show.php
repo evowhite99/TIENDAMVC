@@ -28,6 +28,22 @@
 <?php else :?>
     <a href="<?= ROOT ?>login" class="btn btn-primary">Comprar</a>
 <?php endif; ?>
+<!--relacionados-->
+<h3 class="text-center mt-5">Productos relacionados</h3>
+<div class="row">
+    <?php foreach ($data['data']->related_products as $related_product): ?>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="<?= ROOT ?>img/<?= $related_product->image ?>" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $related_product->name ?></h5>
+                    <p class="card-text">Precio: <?= number_format($related_product->price, 2) ?>€</p>
+                    <a href="<?= ROOT ?>shop/show/<?= $related_product->id ?>" class="btn btn-primary">Ver detalles</a>
+                </div>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
 <?php include_once dirname(__DIR__) . ROOT . 'footer.php'?>
 
 
